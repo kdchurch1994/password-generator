@@ -3,9 +3,12 @@ function generatePassword() {
   // Prompt user for password requirements and forces user to select between 8 and 128 characters
   var charSet = "";
   var length = window.prompt("How many characters do you want to use for the password? Please select between 8 and 128 characters.");
+
+    // User does not enter a number
     if (length == "") {
       window.alert("You must enter a valid number!")
       }
+    // User enters a number less than 8 or greater than 129
     else if ( length > "128" && length < "8") {
       var length = window.prompt("Your password did not meet the character length requirements. Please enter length between 8 and 128 characters");
       var lowercase = window.confirm("Do you want include lowercase letters in your password? Click ok for yes and cancel for no.");
